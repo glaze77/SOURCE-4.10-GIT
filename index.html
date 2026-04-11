@@ -6467,6 +6467,12 @@ window.transferTriviaDeck = {};
 
   function mediaHtml(entry) {
     var meta = (entry && entry.meta) || {};
+    var showAnswerMedia = !(
+      meta.showAnswerMedia === false ||
+      meta.answerMedia === false ||
+      meta.mediaInAnswer === false
+    );
+    if (!showAnswerMedia) return "";
     var media = Array.isArray(meta.media) ? meta.media : [];
     if (!media.length) return "";
     var cls = "tt-answer-media single";
