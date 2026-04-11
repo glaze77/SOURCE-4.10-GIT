@@ -7323,7 +7323,7 @@ window.transferTriviaDeck = {};
         fitAnswerTextInModal();
       });
     });
-    var mediaImgs = document.querySelectorAll("#question-modal .tt-media-card img");
+    var mediaImgs = document.querySelectorAll("#question-modal .tt-media-card img, #question-modal .tt-question-media-card img");
     mediaImgs.forEach(function(img) {
       if (img.complete) return;
       img.addEventListener("load", function() {
